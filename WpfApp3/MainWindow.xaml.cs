@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FormaEmp.Components;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,7 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WpfApp3
+namespace FormaEmp
 {
     /// <summary>
     /// Логика взаимодействия для MainWindow.xaml
@@ -23,6 +24,8 @@ namespace WpfApp3
         public MainWindow()
         {
             InitializeComponent();
+            Navigation.main = this;
+            Navigation.NextPage(new Nav("", new EmployeeList()));
         }
     }
 }
